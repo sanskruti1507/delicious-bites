@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delicious Bites - Your Culinary Journey</title>
+    <!-- Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ecb2b2; /* Light background for the whole page */
+        }
+        /* Custom scrollbar for a cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-md py-4 px-6 md:px-12 fixed w-full z-50">
+        <nav class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-6xl font-bold text-red-600 hover:text-red-700 transition duration-300">
+                Delicious Bites
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-lg font-medium text-gray-700 hover:text-red-600 transition duration-300">Home</a>
+                <a href="#menu" class="text-lg font-medium text-gray-700 hover:text-red-600 transition duration-300">Menu</a>
+                <a href="#about" class="text-lg font-medium text-gray-700 hover:text-red-600 transition duration-300">About Us</a>
+                <a href="#contact" class="text-lg font-medium text-gray-700 hover:text-red-600 transition duration-300">Contact</a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 hover:text-red-600 focus:outline-none">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white mt-4 rounded-lg shadow-lg">
+            <a href="#home" class="block py-3 px-6 text-lg font-medium text-gray-700 hover:bg-gray-100 hover:text-red-600 transition duration-300 rounded-t-lg">Home</a>
+            <a href="#menu" class="block py-3 px-6 text-lg font-medium text-gray-700 hover:bg-gray-100 hover:text-red-600 transition duration-300">Menu</a>
+            <a href="#about" class="block py-3 px-6 text-lg font-medium text-gray-700 hover:bg-gray-100 hover:text-red-600 transition duration-300">About Us</a>
+            <a href="#contact" class="block py-3 px-6 text-lg font-medium text-gray-700 hover:bg-gray-100 hover:text-red-600 transition duration-300 rounded-b-lg">Contact</a>
+        </div>
+    </header>
+
+  <!-- Hero Section -->
+<section
+  id="home"
+  class="relative h-screen bg-cover bg-center flex items-center justify-center text-white"
+  style="background-image: url('home.jpg');"
+>
+  <!-- Black overlay with 50% opacity -->
+  <div class="absolute inset-0 bg-black opacity-30"></div>
+
+  <!-- Fresh baby pink overlay with 40% opacity and multiply blend -->
+  <div class="absolute inset-0 bg-pink-200 opacity-10 mix-blend-multiply"></div>
+
+  <!-- Content -->
+  <div
+    class="relative z-10 text-center p-6 md:p-12 bg-white bg-opacity-20 rounded-xl shadow-2xl backdrop-blur-sm"
+  >
+    <h1
+      class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight drop-shadow-lg"
+    >
+      Savor the Flavor
+    </h1>
+    <p class="text-xl md:text-2xl mb-8 font-light drop-shadow-md">
+      Experience culinary excellence with every bite.
+    </p>
+    <a
+      href="#menu"
+      class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full text-xl transition duration-300 transform hover:scale-105 shadow-lg"
+    >
+      View Our Menu
+    </a>
+  </div>
+</section>
+
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-16 bg-gradient-to-r from-rose-100 to-amber-100">
+
+
+        <div class="container mx-auto px-6 md:px-12">
+            <h2 class="text-5xl font-bold text-center mb-12 text-gray-900">Our Delicious Menu</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+                <!-- Menu Item 1: Gourmet Burger -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="burger.jpg" alt="Gourmet Burger" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Gourmet Burger</h3>
+                        <p class="text-gray-600 mb-4">Juicy patty, fresh veggies, special sauce, and toasted bun. A classic done right!</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$12.99</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 2: Spicy Arrabiata Pasta -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="pasta.jpg" alt="Spicy Pasta" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Spicy Arrabiata Pasta</h3>
+                        <p class="text-gray-600 mb-4">Al dente pasta with a fiery tomato sauce, fresh basil, and parmesan cheese.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$14.50</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 3: Garden Fresh Salad -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="salad1.jpg" alt="Fresh Salad" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Garden Fresh Salad</h3>
+                        <p class="text-gray-600 mb-4">Crisp greens, cherry tomatoes, cucumber, bell peppers, and a zesty vinaigrette.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$9.75</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 4: Grilled Salmon Fillet -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="seafood.jpg" alt="Seafood Delight" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Grilled Salmon Fillet</h3>
+                        <p class="text-gray-600 mb-4">Perfectly grilled salmon, seasoned with herbs, served with roasted vegetables.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$18.99</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 5: Decadent Chocolate Cake -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="chocolate cake.jpg" alt="Chocolate Cake" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Decadent Chocolate Cake</h3>
+                        <p class="text-gray-600 mb-4">Rich, moist chocolate cake with a luscious ganache frosting. A sweet ending!</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$7.50</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 6: New - Chicken Caesar Wrap -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="chicken wrap.jpg" alt="Chicken Caesar Wrap" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Chicken Caesar Wrap</h3>
+                        <p class="text-gray-600 mb-4">Grilled chicken, crisp romaine, parmesan, and creamy Caesar dressing in a soft tortilla.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$10.25</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 7: New - Margherita Pizza -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="pizza.jpg" alt="Margherita Pizza" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Classic Margherita Pizza</h3>
+                        <p class="text-gray-600 mb-4">Simple yet perfect: fresh mozzarella, basil, and tomato sauce on a thin crust.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$15.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 8: New - Veggie Stir-fry -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="stir fry.jpg" alt="Veggie Stir-fry" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Savory Veggie Stir-fry</h3>
+                        <p class="text-gray-600 mb-4">Assorted fresh vegetables wok-fried in a light, savory sauce, served with rice.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$13.75</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 9: New - Beef Tacos -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="tacos.jpg" alt=" Tacos" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Spicy Tacos</h3>
+                        <p class="text-gray-600 mb-4">Seasoned ground beef, crisp lettuce, cheese, and salsa in a crunchy taco shell.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$11.99</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 10: New - Chicken Alfredo -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="alfredo.jpg" alt="Chicken Alfredo" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Creamy Chicken Alfredo</h3>
+                        <p class="text-gray-600 mb-4">Fettuccine pasta tossed in a rich, creamy Alfredo sauce with tender chicken strips.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$17.50</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 11: New - Shrimp Scampi -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="shrimp.jpg" alt="Shrimp Scampi" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Garlic Butter Shrimp Scampi</h3>
+                        <p class="text-gray-600 mb-4">Succulent shrimp sautéed in garlic butter sauce, served over linguine.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$19.25</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 12: New - Vegetable Curry -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="soup.jpg" alt="Vegetable Curry" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Hearty Vegetable Curry</h3>
+                        <p class="text-gray-600 mb-4">A rich and flavorful curry with mixed vegetables, simmered in coconut milk.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$14.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 13: New - Breakfast Burrito -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="burrito.jpg" alt="Breakfast Burrito" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Savory Breakfast Burrito</h3>
+                        <p class="text-gray-600 mb-4">Scrambled eggs, cheese, sausage, and potatoes wrapped in a warm tortilla.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$9.50</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 14: New - Caprese Skewers -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="caprese.jpg" alt="Caprese Skewers" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Fresh Caprese Skewers</h3>
+                        <p class="text-gray-600 mb-4">Cherry tomatoes, fresh mozzarella, and basil, drizzled with balsamic glaze.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$8.75</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 15: New - Classic Pancakes -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="pcake.jpg" alt="Pancakes" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Golden Buttermilk Pancakes</h3>
+                        <p class="text-gray-600 mb-4">Light and fluffy pancakes served with maple syrup and a pat of butter.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$9.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Menu Item 16: Acai Smoothie Bowl (already present, keeping it) -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="smoothie.jpg" alt="Smoothie Bowl" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Acai Smoothie Bowl</h3>
+                        <p class="text-gray-600 mb-4">Refreshing acai blend topped with granola, fresh fruits, and chia seeds.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$11.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Menu Item 17: Club Sandwich (already present, keeping it) -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="sandwich.jpg" alt="Sandwich" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Club Sandwich</h3>
+                        <p class="text-gray-600 mb-4">Classic triple-decker sandwich with turkey, bacon, lettuce, tomato, and mayo.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$11.50</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Menu Item 18: Red Velvet Cupcake (already present, keeping it) -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="cupcake.jpg" alt="Cupcake" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Red Velvet Cupcake</h3>
+                        <p class="text-gray-600 mb-4">Moist red velvet cupcake with rich cream cheese frosting.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$4.50</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Menu Item 19: Freshly Squeezed Lemonade (already present, keeping it) -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="lemonade.jpg" alt="Lemonade" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Freshly Squeezed Lemonade</h3>
+                        <p class="text-gray-600 mb-4">Tangy and refreshing lemonade, perfect for a hot day.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$5.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Menu Item 20: Belgian Waffles with Ice Cream (already present, keeping it) -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="waffle.jpg" alt="Waffles" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Belgian Waffles with Ice Cream</h3>
+                        <p class="text-gray-600 mb-4">Crispy Belgian waffles topped with a scoop of vanilla ice cream and chocolate sauce.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$9.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Menu Item 21: Classic Beef Lasagna (already present, keeping it) -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="lasagna.jpg" alt="Lasagna" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">classic Lasagna</h3>
+                        <p class="text-gray-600 mb-4">Layers of pasta, rich bolognese sauce, and creamy béchamel, baked to perfection.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$16.50</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Menu Item 22: Detox Green Smoothie (already present, keeping it) -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="gsmoothie.jpg" alt="Green Smoothie" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Detox Green Smoothie</h3>
+                        <p class="text-gray-600 mb-4">A healthy blend of spinach, kale, banana, and apple for a refreshing boost.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$7.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Menu Item 23: Loaded Nachos (already present, keeping it) -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="nachos.jpg" alt="Nachos" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Loaded Nachos</h3>
+                        <p class="text-gray-600 mb-4">Crispy tortilla chips loaded with melted cheese, jalapeños, salsa, and sour cream.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$10.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Menu Item 24: Warm Chocolate Brownie (already present, keeping it) -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="brownie.jpg" alt="Brownie" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Warm Chocolate Brownie</h3>
+                        <p class="text-gray-600 mb-4">Fudgy chocolate brownie, served warm with a scoop of vanilla ice cream.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$6.50</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Menu Item 25: Crispy Vegetable Spring Rolls (already present, keeping it) -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="springroll.jpg" alt="Spring Rolls" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Crispy Vegetable Spring Rolls</h3>
+                        <p class="text-gray-600 mb-4">Golden fried spring rolls filled with fresh vegetables, served with sweet chili sauce.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$8.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Menu Item 26: Assorted Donuts (already present, keeping it) -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="donut.jpg" alt="Donuts" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Assorted Donuts</h3>
+                        <p class="text-gray-600 mb-4">A selection of freshly baked donuts with various glazes and toppings.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$3.50</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Menu Item 27: Creamy Latte (already present, keeping it) -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="coffee.jpg" alt="Coffee Latte" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Creamy Latte</h3>
+                        <p class="text-gray-600 mb-4">Smooth espresso with steamed milk and a delicate foam top.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$4.75</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Menu Item 28: Crispy French Fries (already present, keeping it) -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="fries.jpg" alt="Fries" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Crispy French Fries</h3>
+                        <p class="text-gray-600 mb-4">Golden, crispy French fries, perfectly salted and served with ketchup.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$4.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Menu Item 29: Berry Blast Smoothie Bowl (already present, keeping it) -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="bsmoothie.jpg" alt="Smoothie Bowl 2" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Berry Blast Smoothie Bowl</h3>
+                        <p class="text-gray-600 mb-4">A vibrant blend of mixed berries, banana, and yogurt, topped with granola and coconut flakes.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$11.50</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- New Menu Item 30: Grilled Chicken Salad (already present, keeping it) -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="csalad.jpg" alt="Chicken Salad" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Grilled Chicken Salad</h3>
+                        <p class="text-gray-600 mb-4">Tender grilled chicken breast on a bed of mixed greens, with cherry tomatoes and a light dressing.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$13.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 31: New - Instant Maggi Noodles -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="maggie.jpg" alt="Maggi" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Instant Maggi Noodles</h3>
+                        <p class="text-gray-600 mb-4">Quick and delicious instant noodles, a classic comfort food.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$4.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 32: New - Creamy Vanilla Ice Cream -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="icecream.jpg" alt="Ice Cream" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Creamy Ice Cream</h3>
+                        <p class="text-gray-600 mb-4">A scoop of rich and creamy vanilla ice cream, perfect for a sweet treat.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$5.50</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 33: New - Iced Cold Coffee -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="ccoffee.jpg" alt="Cold Coffee" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Iced Cold Coffee</h3>
+                        <p class="text-gray-600 mb-4">Refreshing cold coffee with a hint of sweetness, perfect for a pick-me-up.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$6.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 34: New - Spicy Hakka Noodles -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="noodles.jpg" alt="Noodles" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Spicy Hakka Noodles</h3>
+                        <p class="text-gray-600 mb-4">Wok-tossed Hakka noodles with fresh vegetables and a spicy kick.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$12.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 35: New - Chicken Fried Rice -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="rice.jpg" alt="Fried Rice" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Fried Rice</h3>
+                        <p class="text-gray-600 mb-4">Classic fried rice with tender chicken pieces and mixed vegetables.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$13.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                  <!-- Menu Item 36: New - Vegetable Manchurian -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="manchurian.jpg" alt="Manchurian" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Vegetable Manchurian</h3>
+                        <p class="text-gray-600 mb-4">Deep-fried vegetable balls tossed in a spicy and tangy Manchurian sauce.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$14.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 37: New - Vada Pav -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="vada pav.jpg" alt="Vada Pav" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Classic Vada Pav</h3>
+                        <p class="text-gray-600 mb-4">Spicy potato fritter served in a soft bun with chutneys, a Mumbai street food favorite.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$5.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 38: New - Crispy Samosa -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="samosa.jpg" alt="Samosa" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Crispy Samosa</h3>
+                        <p class="text-gray-600 mb-4">Deep-fried pastry filled with spiced potatoes and peas, served with mint chutney.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$4.50</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 39: New - Pav Bhaji -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="pavbhaji.jpg" alt="Pav Bhaji" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Mumbai Style Pav Bhaji</h3>
+                        <p class="text-gray-600 mb-4">A flavorful mashed vegetable curry served with buttered soft bread rolls.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$11.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 40: New - Sweet Lassi -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="lassi.jpg" alt="Lassi" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Refreshing Sweet Lassi</h3>
+                        <p class="text-gray-600 mb-4">A traditional Indian yogurt-based drink, sweet and refreshing.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$6.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 41: New - Pani Puri -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="panipuri.jpg" alt="Pani Puri" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Classic Pani Puri</h3>
+                        <p class="text-gray-600 mb-4">Crispy hollow balls filled with spiced potatoes, chickpeas, and tangy flavored water.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$7.00</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Menu Item 42: New - Royal Falooda -->
+                <div class="bg-white rounded-xl shadow-xl overflow-hidden transform hover:scale-105 transition duration-300 ease-in-out">
+                    <img src="faluda.jpg" alt="Falooda" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-3xl font-semibold mb-3 text-gray-800">Royal Falooda</h3>
+                        <p class="text-gray-600 mb-4">A delightful dessert drink with vermicelli, basil seeds, milk, and ice cream.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-red-600 text-3xl font-bold">$8.50</span>
+                            <button class="bg-red-600 hover:bg-red-700 text-white py-2 px-6 rounded-full text-lg font-semibold transition duration-300">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-16 bg-pink-100">
+
+        <div class="container mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+  <img
+    src="about us.jpeg"
+    alt="About Us Image"
+    class="rounded-xl shadow-xl transform hover:scale-105 transition duration-300 ease-in-out h-96 w-full object-contain"
+  />
+</div>
+
+
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-5xl font-bold mb-6 text-gray-900">Our Story</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-4">
+                    At <span class="font-semibold text-red-600">Delicious Bites</span>, we believe that food is not just sustenance, but an experience. Founded with a passion for culinary artistry, our mission is to bring joy to your taste buds with every dish we create. We use only the freshest, locally sourced ingredients to ensure unparalleled quality and flavor.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    From our humble beginnings, we've grown into a beloved culinary destination, dedicated to crafting memorable meals and providing exceptional service. Join us on a journey of exquisite tastes and delightful moments.
+                </p>
+            </div>
+        </div>
+    </section>
+
+ <section
+  id="contact"
+  class="relative py-20 overflow-hidden"
+  style="
+    background: linear-gradient(-45deg, #fbc2eb, #a6c1ee, #a1e3ff, #ffb3d9);
+    background-size: 400% 400%;
+    animation: animatedBackground 18s ease infinite;
+  "
+>
+ <!-- Background Image layer -->
+<div
+  class="absolute inset-0 bg-cover bg-center pointer-events-none"
+  style="
+    background-image: url('bg2.jpeg');
+    image-rendering: auto;
+    background-size: cover;
+    background-position: center;
+  "
+></div>
+
+
+
+  <!-- Background texture layer -->
+  <div
+    aria-hidden="true"
+    class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')] bg-repeat bg-white bg-blend-lighten opacity-5 pointer-events-none"
+  ></div>
+
+  <!-- Glassmorphic form container -->
+  <div
+    class="relative container mx-auto px-6 md:px-12 max-w-4xl opacity-0 translate-y-10 animate-fadeSlideIn"
+    style="animation-fill-mode: forwards; animation-delay: 0.3s; animation-duration: 1s; background-color: #efbece;"
+  >
+    <h2
+      id="contact-title"
+      class="text-6xl font-extrabold text-center mb-16 mt-20 text-gray-900 drop-shadow-lg"
+    >
+      <br />
+      Get in Touch
+    </h2>
+
+    <div
+      class="bg-white/20 drop-blur-md rounded-3xl shadow-2xl p-12 md:p-16 border border-white/30"
+      role="form"
+      aria-labelledby="contact-title"
+    >
+      <form class="space-y-8" novalidate>
+        <!-- Name -->
+        <div>
+          <label
+            for="name"
+            class="block mb-3 text-lg font-semibold text-gray-900 drop-shadow-sm"
+            >Name</label
+          >
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Your Name"
+            required
+            class="w-full rounded-xl border border-white/40 bg-white/20 px-6 py-4 text-lg text-gray-900 placeholder-gray-500 shadow-sm backdrop-blur-sm transition focus:outline-none focus:ring-4 focus:ring-sky-400 focus:border-sky-400 focus:animate-glow"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label
+            for="email"
+            class="block mb-3 text-lg font-semibold text-gray-900 drop-shadow-sm"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="your.email@example.com"
+            required
+            class="w-full rounded-xl border border-white/40 bg-white/20 px-6 py-4 text-lg text-gray-900 placeholder-gray-500 shadow-sm backdrop-blur-sm transition focus:outline-none focus:ring-4 focus:ring-sky-400 focus:border-sky-400 focus:animate-glow"
+          />
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label
+            for="message"
+            class="block mb-3 text-lg font-semibold text-gray-900 drop-shadow-sm"
+            >Message</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            placeholder="Your message..."
+            required
+            class="w-full rounded-xl border border-white/40 bg-white/20 px-6 py-4 text-lg text-gray-900 placeholder-gray-500 shadow-sm backdrop-blur-sm transition focus:outline-none focus:ring-4 focus:ring-sky-400 focus:border-sky-400 focus:animate-glow resize-none"
+          ></textarea>
+        </div>
+
+        <!-- Button -->
+        <div class="text-center">
+          <button
+            type="submit"
+            class="inline-block bg-pink-500 hover:bg-sky-500 text-white font-extrabold text-xl px-14 py-4 rounded-full shadow-lg transition-transform transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-sky-300 hover:animate-pulse"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <!-- Contact Info -->
+    <div
+      class="mt-20 text-center text-gray-900 space-y-3 max-w-md mx-auto drop-shadow-lg"
+    >
+      <p class="text-3xl font-semibold">Visit Us:</p>
+      <p class="text-xl">123 Foodie Lane, Culinary City, FL 12345</p>
+      <p class="text-xl">Phone: (123) 456-7890</p>
+      <p class="text-xl">Email: info@deliciousbites.com</p>
+      <br />
+      <br />
+    </div>
+  </div>
+
+  <!-- Styles -->
+  <style>
+    /* Animated background shift */
+    @keyframes animatedBackground {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    /* Fade-in + slide-up */
+    @keyframes fadeSlideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    .animate-fadeSlideIn {
+      animation-name: fadeSlideIn;
+      animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      animation-fill-mode: forwards;
+    }
+
+    /* Input focus glow animation */
+    @keyframes glow {
+      0%,
+      100% {
+        box-shadow: 0 0 5px 2px rgba(236, 72, 153, 0.6); /* pink */
+      }
+      50% {
+        box-shadow: 0 0 8px 4px rgba(118, 217, 245, 0.9); /* sky blue */
+      }
+    }
+    .focus\:animate-glow:focus {
+      animation: glow 1.5s ease-in-out infinite;
+    }
+
+    /* Button pulse on hover */
+    @keyframes pulse {
+      0%,
+      100% {
+        transform: scale(1);
+        box-shadow: 0 0 12px 2px rgba(118, 217, 245, 0.7);
+      }
+      50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px 6px rgba(118, 217, 245, 1);
+      }
+    }
+    .hover\:animate-pulse:hover {
+      animation: pulse 1s ease-in-out infinite;
+    }
+  </style>
+</section>
